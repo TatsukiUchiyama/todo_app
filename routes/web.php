@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+
 
 Route::group(['middleware' => 'auth'], function(){
   Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
@@ -29,5 +29,4 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/folders/{id}/tasks/{task_id}/edit', 'App\Http\Controllers\TaskController@showEditForm')->name('tasks.edit');
   Route::post('/folders/{id}/tasks/{task_id}/edit', 'App\Http\Controllers\TaskController@edit');
 });
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

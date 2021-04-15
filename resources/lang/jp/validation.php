@@ -39,7 +39,7 @@ return [
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => ':attributeには有効な形式のメールアドレスを入力してください。',
-    'email' => ':attributeには有効な形式のメールアドレスを入力してください。',
+    'email' => ':attributeには有効な形式のメールアドレスを入力してください。p',
     'ends_with' => 'The :attribute must end with one of the following: :values.',
     'exists' => 'The selected :attribute is invalid.',
     'file' => 'The :attribute must be a file.',
@@ -150,6 +150,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'email' => 'メールアドレス',
+        'password' => 'パスワード',
+        'token' => 'トークン',
+    ],
 
 ];
